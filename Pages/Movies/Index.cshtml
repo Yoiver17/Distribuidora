@@ -1,0 +1,66 @@
+@page
+@model RazorPagesMovie.Pages_Movies.IndexModel
+
+@{
+    ViewData["Title"] = "Listado";
+}
+
+<h1>Listado de productos</h1>
+
+<p>
+    <a asp-page="Create">Agregar producto</a>
+    <form>
+    <p>
+        Productos: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filtrar" />
+    </p>
+</form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Productos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].fechaingreso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Valorunitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody background="https://st.depositphotos.com/1510192/4892/v/600/depositphotos_48927685-stock-illustration-seamless-vector-pattern-with-fresh.jpg" width= >
+@foreach (var item in Model.Movie) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Productos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaingreso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valorunitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> 
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a> 
+                <a asp-page="./Delete" asp-route-id="@item.ID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url("https://previews.123rf.com/images/elvan74/elvan741606/elvan74160600030/59219343-cierre-de-granos-de-arroz-de-jazm%C3%ADn-rise-fondo-del-grano-arroz-blanco-crudo-secador-de-arroz-sin-pul.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+tbody {
+   font-family: 'Times New Roman', Times, serif;
+   color: black;
+   font-size: larger;
+   border: 0ch;
+   background-image: url(https://i.pinimg.com/474x/2c/ba/b9/2cbab946af140fc66f06740c34a850c9.jpg);
+}
